@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 import {FormsModule} from '@angular/forms'
 import { from } from 'rxjs';
+import { ProductService } from './product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { from } from 'rxjs';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
