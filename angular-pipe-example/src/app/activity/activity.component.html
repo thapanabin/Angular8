@@ -12,20 +12,31 @@
 
 <div class="container">
   <h2>Hover Rows</h2>
-  <p>The .table-hover class enables a hover state on table rows:</p>            
+  <p>The .table-hover class enables a hover state on table rows:</p> 
+  <div>
+      <h1>{{message | titlecase}}</h1>
+      <h3>{{amount | currency: 'USD' }}</h3>
+  </div>
+
+  <div class="alert alert-success"> 
+    {{activities | json}}
+    
+</div>
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>DueDate</th>
+        <th>Status</th>
+
       </tr>
     </thead>
     <tbody>
       <tr *ngFor = "let activity of activities">
         <td>{{activity.id}}</td>
-        <td>{{activity.title}}</td>
-        <td>{{activity.dueDate}}</td>
+        <td>{{activity.title | titlecase}}</td>
+        <td>{{activity.dueDate | date: 'short'}}</td>
         <td><div [ngSwitch] = "activity.status">
             <span *ngSwitchCase = "0">Not Completed</span>
             <span *ngSwitchCase = "1">Completed</span>
