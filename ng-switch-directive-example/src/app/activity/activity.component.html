@@ -1,1 +1,41 @@
-<p>activity works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Activity Details</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Due Date</th>
+        <th>Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+           
+      <tr class="success" *ngFor = "let activity of activities">
+        <td>{{activity.id}}</td>
+        <td>{{activity.title}}</td>
+        <td>{{activity.dueDate}}</td>
+        <td>{{activity.status}}</td>
+
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+

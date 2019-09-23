@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ActivityComponent } from './activity/activity.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { ActivityComponent } from './activity/activity.component';
     ActivityComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
