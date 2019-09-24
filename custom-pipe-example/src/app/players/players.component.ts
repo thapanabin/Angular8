@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlayersComponent implements OnInit {
 players : any;
+searchName : string = "";
   constructor(private http:HttpClient) { }
 
   ngOnInit() {

@@ -9,6 +9,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div style="text-align: center">
+        <input type="text" [(ngModel)]="searchName">
+    </div>
 
 <div class="container">
   <h2>Striped Rows</h2>
@@ -27,7 +30,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let player of players">
+      <tr *ngFor = "let player of players | filter:searchName">
         <td>{{player.name}}</td>
         <td>{{player.team}}</td>
         <td>{{player.dob}}</td>
