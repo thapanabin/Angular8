@@ -12,7 +12,7 @@ export class FilterPipe implements PipeTransform {
     }
     const playersArray: any[]=[];
     for(let i=0;i<=value.length;i++){
-      let teamName: string = value[i].team;
+      let teamName:string = value[i].team;
       if(teamName.startsWith(sName)){
         playersArray.push(value[i]);
       }

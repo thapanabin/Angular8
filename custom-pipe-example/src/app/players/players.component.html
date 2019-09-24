@@ -26,6 +26,8 @@
         <th>6'S</th>
         <th>Others</th>
         <th>Age</th>
+        <th>Score</th>
+
 
       </tr>
     </thead>
@@ -38,6 +40,8 @@
         <td>{{player.noOf6}}</td>
         <td>{{player.others}}</td>
         <td>{{player.dob | age}}</td>
+        <td>{{player.others | score :player.noOf4:player.noOf6}}</td>
+
 
 
 

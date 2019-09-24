@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgePipe } from './age.pipe';
 import { FilterPipe } from './filter.pipe';
 import {FormsModule}   from '@angular/forms';
+import { ScorePipe } from './score.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {FormsModule}   from '@angular/forms';
     AppComponent,
     PlayersComponent,
     AgePipe,
-    FilterPipe
+    FilterPipe,
+    ScorePipe
   ],
   imports: [
     BrowserModule,
