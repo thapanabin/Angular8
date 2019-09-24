@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PlayersComponent } from './players/players.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AgePipe } from './age.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayersComponent
+    PlayersComponent,
+    AgePipe
   ],
   imports: [
     BrowserModule,
